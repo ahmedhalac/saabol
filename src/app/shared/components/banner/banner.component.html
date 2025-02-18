@@ -1,0 +1,5 @@
+<div class="banner-container" [ngStyle]="{'background-color': backgroundColor, 'color': textColor}">
+    <img [src]="iconSource" alt="Banner icon" class="banner-icon">
+    <p class="title">{{title}}</p>
+    <p class="subtitle" [ngStyle]="{'padding-top': shouldHidePadding ? '0px' : '16px'}">{{subtitle}}</p>
+</div>

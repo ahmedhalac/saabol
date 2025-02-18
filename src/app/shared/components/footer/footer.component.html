@@ -1,0 +1,39 @@
+<div class="footer-wrapper">
+    <div class="footer-container">
+        <div class="logo">
+            <img src="../../../../assets/images/branding/footer-logo.svg" alt="Company logo">
+        </div>
+        <div class="info-wrapper">
+            <div class="info">
+                <p class="title">Tenaciously Protecting the Independence of Seniors and Disabled Veterans</p>
+                <div class="contact-us-btn">
+                    <button (click)="onBtnClick()" class="secondary">Contact Us</button>
+                </div>
+            </div>
+            <div class="contact-wrapper">
+                <div class="links-wrapper">
+                    <div class="links">
+                        <p class="link" [routerLink]="['/']" [routerLinkActiveOptions]="{exact:true}"
+                            routerLinkActive="active">
+                            Home</p>
+                        <p class="link" [routerLink]="['/about-us']" [routerLinkActiveOptions]="{exact:true}"
+                            routerLinkActive="active">
+                            About</p>
+                        <p class="link" [routerLink]="['/contact-us']" [routerLinkActiveOptions]="{exact:true}"
+                            routerLinkActive="active">Contact</p>
+                    </div>
+                    <div class="ivmf">
+                        <p>Proud graduate of:</p>
+                        <img src="../../../../assets/images/icons/ivmf.svg" alt="Ivmf">
+                    </div>
+                </div>
+                <div class="contact-info">
+                    <p class="address">Address: 100 N. Loudoun St. Suite 130 Winchester, VA 22601</p>
+                    <p class="phone-num">Phone Number:<a href="tel:540-627-5581">540-627-5581</a></p>
+                    <p class="email">Email: info@saabol.com</p>
+                    <p>© 2023, All Rights Reserved</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,178 @@
+@import "../../const/colors.scss";
+@import "../../const/mixins.scss";
+
+.footer-wrapper {
+  background: $portal-footer-color;
+  .footer-container {
+    padding: 48px 16px;
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    flex-direction: column;
+
+    @include media(">=tablet") {
+      padding: 64px 24px;
+    }
+
+    @include media(">=desktop") {
+      padding: 96px 64px;
+      flex-direction: row;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      border-bottom: 1px solid $portal-link-active;
+      padding-bottom: 32px;
+
+      @include media(">=desktop") {
+        border-bottom: 0;
+        padding: 0 64px 0 0;
+        border-right: 1px solid $portal-link-active;
+      }
+    }
+
+    .info-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+
+      @include media(">=desktop") {
+        width: 100%;
+        margin-left: 32px;
+      }
+
+      .info {
+        display: flex;
+        flex-direction: column;
+
+        @include media(">=tablet") {
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          gap: 32px;
+          flex-wrap: wrap;
+        }
+
+        .title {
+          color: $portal-link-active;
+          font-family: "GothamRounded";
+          font-size: 26px;
+          font-style: normal;
+          font-weight: 350;
+          line-height: 40px;
+          margin: 0;
+          padding-bottom: 16px;
+
+          @include media(">=tablet") {
+            padding-bottom: 0;
+          }
+
+          @include media("<tablet") {
+            font-size: 24px;
+          }
+        }
+
+        .contact-us-btn {
+          button {
+            border-radius: 100px;
+            background: $portal-link-active;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 24px;
+            color: $portal-white;
+            width: 100%;
+            padding: 12px 32px;
+            border: none;
+            cursor: pointer;
+          }
+
+          @include media(">=tablet") {
+            button {
+              width: auto;
+            }
+          }
+        }
+      }
+
+      .contact-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+
+        @include media(">=tablet") {
+          flex-direction: row-reverse;
+          justify-content: space-between;
+        }
+
+        .links-wrapper {
+          display: flex;
+          flex-direction: column;
+          gap: 32px;
+
+          @include media(">=tablet") {
+            gap: 0;
+            justify-content: space-between;
+          }
+
+          .links {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+
+            @include media(">=tablet") {
+              flex-direction: row;
+            }
+
+            p {
+              color: $portal-link-active;
+              font-size: 20px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 24px;
+              margin: 0;
+              cursor: pointer;
+            }
+          }
+        }
+
+        .ivmf,
+        .contact-info {
+          p {
+            color: $portal-link-active;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 24px;
+            margin: 0;
+            padding-bottom: 8px;
+          }
+        }
+
+        .contact-info {
+          a {
+            text-decoration: none;
+            padding-left: 5px;
+            color: $portal-link-active;
+          }
+
+          p:first-child {
+            margin-top: 0;
+          }
+
+          p:nth-child(3) {
+            padding-bottom: 16px;
+          }
+
+          p:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}

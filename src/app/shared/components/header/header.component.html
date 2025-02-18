@@ -1,0 +1,57 @@
+<div class="header-container" [style.backgroundColor]="backgroundColor">
+    <div class="header-wrapper">
+        <div class="left-section">
+            <img class="logo" alt="Logo" src="./../../../../assets/images/branding/header-logo.svg">
+            <div class="menu">
+                <div [routerLink]="['/']" [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active"
+                    class="menu-item">
+                    <p>Home</p>
+                </div>
+                <div [routerLink]="['/about-us']" [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active"
+                    class="menu-item">
+                    <p>About us</p>
+                </div>
+            </div>
+
+            <div class="menu-container">
+                <div *ngIf="isMobileMenuActive" class="mobile-menu">
+                    <div class="close-container" [style.backgroundColor]="backgroundColor">
+                        <img class="logo" alt="Logo" src="../../../../assets/images/branding/header-logo.svg">
+                        <img class="icon" (click)="toggleMobileMenu()" src="../../../../assets/images/icons/close.svg"
+                            alt="Close icon">
+                    </div>
+                    <div class="options-container" [style.backgroundColor]="backgroundColor">
+                        <a (click)="toggleMobileMenu()" [routerLink]="['/']" [routerLinkActiveOptions]="{exact:true}"
+                            routerLinkActive="active" class="mobile-item">Home</a>
+                        <a (click)="toggleMobileMenu()" [routerLink]="['/about-us']"
+                            [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active" class="mobile-item">About
+                            us</a>
+                        <a (click)="toggleMobileMenu()" [routerLink]="['/contact-us']"
+                            [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active"
+                            class="mobile-item">Contact
+                            Us</a>
+                        <a class="phone-num" href="tel:540-627-5581">
+                            <img src="../../../../assets/images/icons/phone.svg" alt="Phone">
+                            <p class="number">540-627-5581</p>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="right-section">
+            <div class="menu phone-num">
+                <a class="menu-item" href="tel:540-627-5581">
+                    <img src="../../../../assets/images/icons/phone.svg" alt="Phone">
+                    <p class="number">540-627-5581</p>
+                </a>
+            </div>
+            <div [routerLink]="['/contact-us']" [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active"
+                class="menu-item">
+                <p>Contact Us</p>
+            </div>
+            <img (click)="toggleMobileMenu()" class="menu-icon" src="../../../../assets/images/icons/menu-bar.svg"
+                alt="Menu icon">
+        </div>
+    </div>
+</div>

@@ -1,0 +1,64 @@
+@import "../../const/colors.scss";
+@import "../../const/mixins.scss";
+
+.banner-container {
+  position: relative;
+  padding: 48px 16px;
+
+  @include media(">=tablet") {
+    padding: 96px 24px;
+  }
+
+  @include media(">=desktop") {
+    padding: 96px 64px;
+  }
+
+  .banner-icon {
+    position: absolute;
+    top: 0;
+    width: 90%;
+    height: 100%;
+
+    @include media(">=large-phone") {
+      right: 10%;
+      width: 70%;
+    }
+
+    @include media(">=desktop") {
+      width: 100%;
+      right: 0;
+    }
+  }
+
+  .title {
+    text-align: center;
+    font-family: "GothamRounded";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    margin: 0;
+    line-height: 48px;
+    letter-spacing: -0.8px;
+
+    @include media(">=tablet") {
+      font-size: 48px;
+      line-height: 64px;
+      letter-spacing: -0.96px;
+    }
+  }
+
+  .subtitle {
+    text-align: center;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    margin: 0 auto;
+    line-height: 24px;
+
+    @include media(">=tablet") {
+      font-size: 24px;
+      line-height: 32px;
+      max-width: 768px;
+    }
+  }
+}

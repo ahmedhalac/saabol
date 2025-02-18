@@ -1,0 +1,764 @@
+@import "../../shared/const/colors.scss";
+@import "../../shared/const/mixins.scss";
+
+.landing-intro {
+  .intro-wrapper {
+    background-color: $primary-header-color;
+    position: relative;
+
+    .intro {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 96px 64px;
+
+      @include media("<desktop") {
+        padding: 48px 24px;
+      }
+
+      @include media("<tablet") {
+        padding: 48px 16px;
+      }
+
+      .title-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 80px;
+
+        @include media("<tablet") {
+          font-size: 40px;
+        }
+
+        @include media("<=large-phone") {
+          line-height: 48px;
+          padding: 0;
+        }
+
+        .intro-card {
+          text-align: left;
+          border-radius: 100px;
+          background: $portal-white-variant;
+          display: flex;
+          align-self: baseline;
+
+          p {
+            color: $portal-supporting-text;
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 24px;
+            padding: 6px 12px;
+          }
+        }
+
+        .title {
+          color: $portal-link-active;
+          font-family: "GothamRounded";
+          font-size: 40px;
+          font-style: normal;
+          font-weight: 400;
+          padding-top: 24px;
+          line-height: 64px;
+          letter-spacing: -1.12px;
+          max-width: 1152px;
+
+          @include media("<tablet") {
+            font-size: 30px;
+            line-height: 48px;
+            letter-spacing: -0.8px;
+          }
+        }
+
+        p {
+          margin: 0;
+
+          &.supporting-text {
+            color: $portal-supporting-text;
+            font-size: 24px;
+            font-weight: 400;
+            line-height: 32px;
+            padding-top: 24px;
+            max-width: 1152px;
+
+            @include media("<=large-phone") {
+              line-height: 24px;
+              font-size: 18px;
+            }
+          }
+        }
+      }
+
+      .get-started-btn {
+        padding-top: 24px;
+
+        button {
+          cursor: pointer;
+          border-radius: 100px;
+          background: #652d90;
+          font-size: 16px;
+          font-weight: 500;
+          line-height: 24px;
+          color: $portal-white;
+          width: 100%;
+          padding: 12px 32px;
+          border: none;
+        }
+
+        @include media(">=tablet") {
+          button {
+            width: auto;
+          }
+        }
+      }
+
+      .intro-images {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+        gap: 25px;
+        padding-top: 64px;
+        height: 480px;
+        max-width: 1152px;
+        margin: 0 auto;
+
+        @include media("<tablet") {
+          gap: 24px;
+          height: 320px;
+        }
+
+        @include media("<=large-phone") {
+          gap: 10px;
+          margin: 0 -16px;
+        }
+
+        img {
+          object-fit: cover;
+          border-radius: 16px;
+          height: 100%;
+          background-repeat: no-repeat;
+          width: calc((100% - 64px) / 5);
+
+          box-shadow: 0px 4px 6px -2px rgba(95, 97, 110, 0.02),
+            0px 12px 16px -4px rgba(95, 97, 110, 0.06);
+
+          &:nth-child(1),
+          &:nth-child(3),
+          &:nth-child(5) {
+            margin-top: 70px;
+          }
+
+          @include media("<tablet") {
+            width: calc((100% - 64px) / 5);
+          }
+
+          @include media("<desktop") {
+            width: calc(33.33% - 8px);
+
+            &:nth-child(4),
+            &:nth-child(5) {
+              display: none;
+            }
+          }
+
+          @include media("<=large-phone") {
+            &:first-child {
+              border-top-left-radius: 0;
+              border-bottom-left-radius: 0;
+            }
+
+            &:last-child {
+              border-top-right-radius: 0;
+              border-bottom-right-radius: 0;
+            }
+          }
+        }
+
+        back img {
+          margin-right: 32px;
+
+          max-width: 100%;
+          height: auto;
+        }
+      }
+
+      .icon {
+        position: absolute;
+        top: 64%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 256px;
+
+        @include media(">=tablet") {
+          top: 46%;
+          height: 320px;
+        }
+
+        @include media(">=desktop") {
+          display: none;
+        }
+      }
+    }
+
+    .wave {
+      position: absolute;
+      bottom: 0;
+    }
+  }
+
+  .mission-section {
+    max-width: 1280px;
+    margin: 0 auto;
+
+    .mission-wrapper {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      margin: 48px 16px;
+
+      @include media(">=tablet") {
+        flex-direction: row;
+        gap: 32px;
+        margin: 96px 24px;
+      }
+
+      @include media(">=desktop") {
+        margin: 96px 64px;
+      }
+
+      .our-mission {
+        display: flex;
+        flex-direction: column;
+
+        .mission-card {
+          margin-bottom: 24px;
+          width: 100%;
+
+          @include media(">=tablet") {
+            width: auto;
+            margin-bottom: 32px;
+          }
+        }
+
+        .mission-card:last-child {
+          margin-bottom: 0;
+        }
+      }
+
+      .our-mission-2 {
+        display: flex;
+        flex-direction: column;
+
+        .mission-card {
+          margin-top: 24px;
+          width: 100%;
+
+          @include media(">=tablet") {
+            width: auto;
+            margin-top: 32px;
+
+            &:nth-child(1) {
+              margin-top: 64px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .features-section {
+    max-width: 1280px;
+    margin: 0 auto;
+
+    .features-wrapper {
+      padding: 48px 16px;
+
+      @include media(">=tablet") {
+        padding: 96px 24px;
+      }
+
+      @include media(">=desktop") {
+        padding: 96px 64px;
+      }
+
+      .cards-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+
+        @include media(">=tablet") {
+          display: grid;
+          grid-template-areas:
+            "card1 card2"
+            "card1 card3"
+            "card4 card3"
+            "card4 card5";
+
+          .card-item:nth-child(1) {
+            grid-area: card1;
+          }
+
+          .card-item:nth-child(2) {
+            grid-area: card2;
+          }
+
+          .card-item:nth-child(3) {
+            grid-area: card3;
+          }
+
+          .card-item:nth-child(4) {
+            grid-area: card4;
+          }
+
+          .card-item:nth-child(5) {
+            grid-area: card5;
+          }
+        }
+
+        @include media(">=desktop") {
+          gap: 32px;
+        }
+
+        .card-item {
+          padding: 24px;
+          border-radius: 24px;
+          display: flex;
+          flex-direction: column;
+          box-shadow: -16px 16px 40px 0px rgba(6, 46, 44, 0.04);
+
+          @include media(">=tablet") {
+            flex-basis: calc(50% - 94px);
+            padding: 40px;
+          }
+
+          .card-image {
+            width: 100%;
+            padding-bottom: 32px;
+            position: relative;
+            z-index: 1;
+
+            .image-placeholder {
+              position: absolute;
+              width: 100%;
+              inset: 0;
+              z-index: -1;
+              transform: rotate(-2.5deg);
+              border-radius: 24px;
+              max-height: 310px;
+              height: 100%;
+
+              &.reversed {
+                transform: rotate(2.5deg);
+              }
+
+              @include media(">=desktop") {
+                max-width: 480px;
+              }
+            }
+
+            img {
+              width: 100%;
+              border-radius: 24px;
+              min-height: 310px;
+              max-height: 310px;
+              object-fit: cover;
+              background-repeat: no-repeat;
+              box-shadow: 0px 8px 16px 0px rgba(6, 46, 44, 0.08);
+
+              @include media(">=tablet") {
+                max-height: unset;
+                height: 100%;
+                min-width: 240px;
+              }
+
+              @include media(">=desktop") {
+                max-width: 480px;
+              }
+            }
+          }
+
+          .title {
+            font-family: "GothamRounded";
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 350;
+            line-height: 32px;
+            padding-bottom: 16px;
+
+            @include media(">=tablet") {
+              font-size: 32px;
+              line-height: 40px;
+            }
+          }
+
+          .title,
+          .text {
+            margin: 0;
+            max-width: 480px;
+          }
+
+          .text {
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 24px;
+            padding-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .service-section {
+    max-width: 1280px;
+    margin: 0 auto;
+
+    .service-wrapper {
+      padding: 48px 16px;
+
+      @include media(">=tablet") {
+        padding: 96px 24px;
+      }
+
+      @include media(">=desktop") {
+        padding: 96px 64px;
+      }
+
+      .cards-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+
+        @include media(">=tablet") {
+          display: grid;
+          grid-template-areas:
+            "card1 card2"
+            "card3 card4";
+
+          .card-item:nth-child(1) {
+            grid-area: card1;
+          }
+
+          .card-item:nth-child(2) {
+            grid-area: card2;
+          }
+
+          .card-item:nth-child(3) {
+            grid-area: card3;
+          }
+
+          .card-item:nth-child(4) {
+            grid-area: card4;
+          }
+        }
+
+        @include media(">=desktop") {
+          gap: 32px;
+        }
+
+        .card-item {
+          padding: 24px;
+          border-radius: 24px;
+          display: flex;
+          flex-direction: column;
+          box-shadow: -16px 16px 40px 0px rgba(6, 46, 44, 0.04);
+
+          @include media(">=tablet") {
+            flex-basis: calc(50% - 94px);
+            padding: 40px;
+          }
+
+          .card-image {
+            width: 100%;
+            padding-bottom: 32px;
+            position: relative;
+            z-index: 1;
+
+            .image-placeholder {
+              position: absolute;
+              width: 100%;
+              inset: 0;
+              z-index: -1;
+              transform: rotate(-2.5deg);
+              border-radius: 24px;
+              max-height: 310px;
+              height: 100%;
+
+              &.reversed {
+                transform: rotate(2.5deg);
+              }
+
+              @include media(">=desktop") {
+                max-width: 480px;
+              }
+            }
+
+            img {
+              width: 100%;
+              border-radius: 24px;
+              min-height: 310px;
+              max-height: 310px;
+              object-fit: cover;
+              background-repeat: no-repeat;
+              box-shadow: 0px 8px 16px 0px rgba(6, 46, 44, 0.08);
+
+              @include media(">=tablet") {
+                max-height: 240px;
+                height: 100%;
+                min-width: 240px;
+              }
+
+              @include media(">=desktop") {
+                max-width: 480px;
+              }
+            }
+          }
+
+          .title {
+            font-family: "GothamRounded";
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 350;
+            line-height: 32px;
+            padding-bottom: 16px;
+
+            @include media(">=tablet") {
+              font-size: 32px;
+              line-height: 40px;
+            }
+          }
+
+          .title,
+          .text {
+            margin: 0;
+            max-width: 480px;
+          }
+
+          .text {
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 24px;
+            padding-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .client-testimonials-section {
+    padding: 48px 16px;
+
+    @include media(">=tablet") {
+      padding: 96px 24px;
+    }
+
+    @include media(">=desktop") {
+      padding: 96px 64px;
+    }
+
+    section {
+      width: 90%;
+      margin: auto;
+      position: relative;
+
+      .slide {
+        @include media(">=tablet") {
+          min-width: 328px;
+          max-width: 400px;
+        }
+      }
+
+      /* Scrollbar */
+      :host ::ng-deep .swiper-scrollbar {
+        position: absolute;
+        bottom: -2rem;
+      }
+
+      :host ::ng-deep .swiper-scrollbar.swiper-scrollbar-horizontal {
+        height: 0.65rem;
+      }
+
+      :host ::ng-deep .swiper-scrollbar.swiper-scrollbar-disabled {
+        display: block;
+      }
+
+      :host
+        ::ng-deep
+        .swiper-scrollbar.swiper-scrollbar-horizontal
+        .swiper-scrollbar-drag {
+        background: navy;
+        height: 0.5rem;
+        padding: 0.1rem;
+      }
+
+      /* Previous and Next buttons */
+
+      .swiper-button-prev,
+      .swiper-button-next {
+        background-color: navy;
+        color: white;
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+      }
+
+      .swiper-button-prev {
+        left: 2rem;
+        right: auto;
+      }
+
+      .swiper-button-next {
+        right: 2rem;
+        left: auto;
+      }
+
+      @media (min-width: 640px) {
+        .swiper-button-prev,
+        .swiper-button-next {
+          padding: 1rem;
+        }
+
+        .swiper-button-prev {
+          left: 10rem;
+        }
+
+        .swiper-button-next {
+          right: 10rem;
+        }
+      }
+    }
+
+    @media (min-width: 640px) {
+      section {
+        width: 70%;
+      }
+    }
+  }
+
+  .contact-us-section {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 48px 16px;
+
+    @include media(">=tablet") {
+      padding: 96px 24px;
+    }
+
+    @include media(">=desktop") {
+      padding: 96px 64px;
+    }
+
+    .contact-us {
+      display: flex;
+      padding: 24px;
+      background: $portal-light-green;
+      flex-direction: column;
+      border-radius: 24px;
+      justify-content: center;
+      gap: 32px;
+
+      @include media(">=tablet") {
+        padding: 40px;
+      }
+
+      @include media(">=desktop") {
+        padding: 40px;
+        flex-direction: row;
+        max-width: 1072px;
+      }
+
+      .image-wrapper {
+        position: relative;
+        z-index: 1;
+
+        .image-placeholder {
+          position: absolute;
+          background: $portal-img-placeholder;
+          width: 100%;
+          inset: 0;
+          z-index: -1;
+          transform: rotate(-2.5deg);
+          border-radius: 24px;
+        }
+
+        .contact-us-img {
+          object-fit: cover;
+          background-repeat: no-repeat;
+          width: 100%;
+          border-radius: 24px;
+          min-height: 310px;
+
+          @include media(">=tablet") {
+            height: 100%;
+            min-width: 480px;
+          }
+
+          @include media(">=desktop") {
+            max-width: 480px;
+          }
+        }
+      }
+
+      .description {
+        @include media(">=desktop") {
+          max-width: 560px;
+        }
+        p {
+          color: $portal-green;
+        }
+
+        .title {
+          font-family: "GothamRounded";
+          font-size: 24px;
+          font-weight: 350;
+          line-height: 32px;
+          padding-bottom: 16px;
+          margin: 0;
+
+          @include media(">=tablet") {
+            font-size: 32px;
+            line-height: 40px;
+          }
+        }
+
+        .text {
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 24px;
+          padding-bottom: 32px;
+          margin: 0;
+
+          @include media(">=desktop") {
+            font-size: 20px;
+          }
+        }
+
+        .contact-us-btn {
+          button {
+            border-radius: 100px;
+            background: $portal-green-btn;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 24px;
+            color: $portal-white;
+            width: 100%;
+            padding: 12px 32px;
+            border: none;
+            cursor: pointer;
+          }
+
+          @include media(">=tablet") {
+            button {
+              width: auto;
+            }
+          }
+        }
+      }
+    }
+  }
+}

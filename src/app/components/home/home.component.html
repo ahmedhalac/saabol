@@ -1,0 +1,204 @@
+<div class="landing-intro">
+    <div class="intro-wrapper">
+        <div class="intro">
+            <div class="title-container">
+                <div class="intro-card">
+                    <p>Welcome to SAABOL</p>
+                </div>
+                <p class="title">Protecting Independence of Seniors and Disabled Veterans</p>
+
+                <p class="supporting-text">With a deep sense of compassion and unwavering faith, we offer a safe and
+                    nurturing environment where residents can find comfort, community and a path to holistic
+                    well-being.
+                </p>
+            </div>
+            <div class="get-started-btn">
+                <button (click)="onBtnClick()">Get Started</button>
+            </div>
+
+            <div class="intro-images">
+                <img class="resident-1" src="../../../assets/images/stock/home/resident-1.webp" alt="Resident 1">
+                <img class="resident-2" src="../../../assets/images/stock/home/resident-2.webp" alt="Resident 2">
+                <img class="resident-3" src="../../../assets/images/stock/home/resident-3.webp" alt="Resident 3">
+                <img class="resident-4" src="../../../assets/images/stock/home/resident-4.webp" alt="Resident 4">
+                <img class="resident-5" src="../../../assets/images/stock/home/resident-5.webp" alt="Resident 5">
+            </div>
+
+            <img src="../../../assets/images/icons/intro-svg.svg" alt="Logo" class="icon">
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 319" class="wave">
+            <path fill="#fff" fill-opacity="1"
+                d="M0,224L120,192C240,160,480,96,720,96C960,96,1200,160,1320,192L1440,224L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z">
+            </path>
+        </svg>
+    </div>
+
+    <app-banner [title]="ourMissionBanner.title" [subtitle]="ourMissionBanner.subtitle"
+        [backgroundColor]="ourMissionBanner.backgroundColor" [textColor]="ourMissionBanner.textColor"
+        [iconSource]="'../../assets/images/icons/banner-logo.svg'">
+    </app-banner>
+
+    <div class="mission-section">
+        <div class="mission-wrapper">
+            <div class="our-mission">
+                <div class="mission-card" *ngFor="let card of ourMissionCardsList">
+                    <app-card [title]="card.title" [text1]="card.text1" [text2]="card.text2"
+                        [backgroundColor]="card.backgroundColor" [textColor]="card.textColor"></app-card>
+                </div>
+            </div>
+            <div class="our-mission-2">
+                <div class="mission-card" *ngFor="let card of ourMissionCardList2">
+                    <app-card [title]="card.title" [text1]="card.text1" [text2]="card.text2"
+                        [backgroundColor]="card.backgroundColor" [textColor]="card.textColor"></app-card>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <app-banner [title]="ourServicesBanner.title" [subtitle]="ourServicesBanner.subtitle"
+        [backgroundColor]="ourServicesBanner.backgroundColor" [textColor]="ourServicesBanner.textColor"
+        [iconSource]="'../../assets/images/icons/banner-logo2.svg'">
+    </app-banner>
+
+    <div class="features-section" id="features-section">
+        <div class="features-wrapper">
+            <app-service-description [title]="residentalLivingContent.title" [text1]="residentalLivingContent.text1"
+                [text2]="residentalLivingContent.text2" [shouldShowButton]="true"
+                [targetSectionId]="'#features-section'"></app-service-description>
+            <div class="cards-wrapper">
+                <div class="card-item" [ngStyle]="{'background-color': '#DEF8F6', 'color': '#00857D'}">
+                    <div class="card-image">
+                        <div class="image-placeholder" [style.backgroundColor]="'#B4E4E2'"></div>
+                        <img src="../../../assets/images/stock/home/holistic-care.webp" alt="Card image">
+                    </div>
+                    <p class="title">Holistic Care</p>
+                    <p class="text">Our caregivers create personalized care plans, focusing on physical, emotional,
+                        and spiritual wellness.</p>
+                </div>
+                <div class="card-item" [ngStyle]="{'background-color': '#DEF2F8', 'color': '#1E748A'}">
+                    <p class="title">Spiritual Nourishment</p>
+                    <p class="text">We offer spiritual guidance, religious services, and opportunities for
+                        residents to
+                        connect with their faith.</p>
+                </div>
+                <div class="card-item" [ngStyle]="{'background-color': '#F9EEE4', 'color': '#8A521E'}">
+                    <div class="card-image">
+                        <div class="image-placeholder reversed" [style.backgroundColor]="'#E4CBB4'"></div>
+                        <img src="../../../assets/images/stock/home/comunity-living.webp" alt="Card image">
+                    </div>
+                    <p class="title">Community Living</p>
+                    <p class="text">We foster a sense of community, encouraging socialization and meaningful
+                        relationships among residents.</p>
+                </div>
+                <div class="card-item" [ngStyle]="{'background-color': '#EDDEF8', 'color': '#652D90'}">
+                    <div class="card-image">
+                        <div class="image-placeholder" [style.backgroundColor]="'#CFB4E4'"></div>
+                        <img src="../../../assets/images/stock/home/nutritious-meals.webp" alt="Card image">
+                    </div>
+                    <p class="title">Nutritious Meals</p>
+                    <p class="text">Our culinary team prepares delicious, well-balanced meals catering to
+                        individual
+                        dietary needs and preferences.</p>
+                </div>
+                <div class="card-item" [ngStyle]="{'background-color': '#DEE6F8', 'color': '#224187'}">
+                    <p class="title">24/7 Support</p>
+                    <p class="text">Our dedicated staff is available round-the-clock to provide assistance and
+                        ensure
+                        residents' safety and comfort.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="service-section" id="service-section">
+        <div class="service-wrapper">
+            <app-service-description [title]="medicalTransportService.title" [text1]="medicalTransportService.text1"
+                [text2]="medicalTransportService.text2" [shouldShowButton]="true"
+                [targetSectionId]="'#service-section'"></app-service-description>
+            <div class="cards-wrapper">
+                <div class="card-item" [ngStyle]="{'background-color': '#DEF8F6', 'color': '#00857D'}">
+                    <div class="card-image">
+                        <div class="image-placeholder" [style.backgroundColor]="'#B4E4E2'"></div>
+                        <img src="../../../assets/images/stock/home/transportation.webp" alt="Card image">
+                    </div>
+                    <p class="title">Safe and Reliable Transportation</p>
+                    <p class="text">Our well-maintained vehicles and trained drivers offer a secure and comfortable
+                        transportation experience.</p>
+                </div>
+                <div class="card-item" [ngStyle]="{'background-color': '#DEF2F8', 'color': '#1E748A'}">
+                    <div class="card-image">
+                        <div class="image-placeholder" [style.backgroundColor]="'#B4DAE4'"></div>
+                        <img src="../../../assets/images/stock/home/support.webp" alt="Card image">
+                    </div>
+                    <p class="title">Compassionate Support</p>
+                    <p class="text">Our drivers understand the unique needs of our residents and provide assistance and
+                        reassurance throughout the transportation process.</p>
+                </div>
+                <div class="card-item" [ngStyle]="{'background-color': '#DEE6F8', 'color': '#224187'}">
+                    <div class="card-image">
+                        <div class="image-placeholder reversed" [style.backgroundColor]="'#B4C2E4'"></div>
+                        <img src="../../../assets/images/stock/home/wheelchair.webp" alt="Card image">
+                    </div>
+                    <p class="title">Wheelchair Accessibility</p>
+                    <p class="text">Our vehicles are equipped to accommodate residents with mobility challenges,
+                        including wheelchair-accessible transportation.</p>
+                </div>
+                <div class="card-item" [ngStyle]="{'background-color': '#EDDEF8', 'color': '#652D90'}">
+                    <div class="card-image">
+                        <div class="image-placeholder" [style.backgroundColor]="'#CFB4E4'"></div>
+                        <img src="../../../assets/images/stock/home/care.webp" alt="Card image">
+                    </div>
+                    <p class="title">Coordinated Care</p>
+                    <p class="text">We work closely with residents and their families to ensure timely and stress-free
+                        access to medical appointments and healthcare services.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <app-banner [title]="clientOpionionsBanner.title" [subtitle]="clientOpionionsBanner.subtitle"
+        [backgroundColor]="clientOpionionsBanner.backgroundColor" [textColor]="clientOpionionsBanner.textColor"
+        [iconSource]="'../../assets/images/icons/banner-logo3.svg'">
+    </app-banner>
+
+
+
+    <div class="client-testimonials-section">
+        <section>
+            <swiper-container #swiperRef swiperElement [config]="config" init="false">
+                <swiper-slide class="slide" *ngFor="let slide of slides">
+                    <app-testimonial-card [imageSrc]="slide.imageSrc" [backgroundColor]="slide.backgroundColor"
+                        [textColor]="slide.textColor" [comment]="slide.comment"
+                        [profilePictureSrc]="slide.profilePictureSrc" [name]="slide.name"
+                        [company]="slide.company"></app-testimonial-card>
+                </swiper-slide>
+            </swiper-container>
+            <div class="swiper-scrollbar"></div>
+        </section>
+    </div>
+
+    <div class="contact-us-section">
+        <div class="contact-us">
+            <div class="image-wrapper">
+                <div class="image-placeholder"></div>
+                <img src="../../../assets/images/stock/home/contact-us.webp" alt="Contact Us" class="contact-us-img">
+            </div>
+            <div class="description">
+                <p class="title">Where Caring Meets Compassion</p>
+                <p class="text">At SAABOL we are dedicated to serving our residents with love, care, and a deep sense of
+                    purpose. <br><br>
+
+                    Whether you're interested in our Residential Assisted Living services or require reliable medical
+                    transportation, we are here to support you with unwavering compassion and faith. <br><br>
+
+                    Please don't hesitate to reach out to us for more information about our services or to schedule a
+                    visit. We look forward to welcoming you into our extended family, where love and faith are at the
+                    heart of everything we do.</p>
+                <div class="contact-us-btn">
+                    <button (click)="onBtnClick()" class="secondary">Contact Us</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

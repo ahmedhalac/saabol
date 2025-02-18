@@ -1,0 +1,49 @@
+@import "../../const/mixins.scss";
+.card-wrapper {
+  padding: 24px;
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: -16px 16px 40px 0px rgba(6, 46, 44, 0.04);
+
+  @include media(">=tablet") {
+    padding: 40px;
+  }
+
+  .title {
+    font-family: "GothamRounded";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 350;
+    line-height: 32px;
+    padding-bottom: 16px;
+
+    @include media(">=tablet") {
+      font-size: 32px;
+      line-height: 40px;
+    }
+  }
+
+  .title,
+  .text1,
+  .text2 {
+    margin: 0;
+    max-width: 480px;
+  }
+
+  .text1,
+  .text2 {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+  }
+
+  .text1 {
+    padding-bottom: 0;
+  }
+
+  .text2 {
+    padding-top: 16px;
+  }
+}

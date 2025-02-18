@@ -1,0 +1,221 @@
+<div class="container">
+    <div class="intro-wrapper">
+        <div class="intro">
+            <div class="title-container">
+                <div class="intro-card">
+                    <p>About Us</p>
+                </div>
+                <p class="title">Where Caring Meets Compassion</p>
+
+                <p class="supporting-text">With a deep sense of compassion and unwavering faith, we offer a safe and
+                    nurturing environment where residents can find comfort, community and a path to holistic
+                    well-being.
+                </p>
+            </div>
+
+            <div class="intro-image">
+                <img src="../../../assets/images/stock/home/contact-us.webp" alt="About Us" class="about-us-img">
+            </div>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 319" class="wave">
+            <path fill="#fff" fill-opacity="1"
+                d="M0,224L120,192C240,160,480,96,720,96C960,96,1200,160,1320,192L1440,224L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z">
+            </path>
+        </svg>
+    </div>
+
+
+    <section class="about">
+        <div class="about-company">
+            <p class="title">Fostering Independence and Compassion for Senior and Disabled Veterans</p>
+            <p class="text">Welcome to SAABOL, where our unwavering dedication is to enhance the independence, dignity,
+                and well-being of our senior and disabled veteran community. <br><br>
+
+                We are a compassionate ministry nonprofit organization committed to providing accessible, barrier-free
+                senior assisted living options and a comprehensive array of support services.<br><br>
+
+                Our objective is to empower the heroes and citizens who have selflessly served our nation to lead
+                fulfilling lives, surrounded by care, respect, and spiritual guidance.</p>
+        </div>
+    </section>
+
+    <app-banner [title]="ourServicesBanner2.title" [subtitle]="ourServicesBanner2.subtitle"
+        [backgroundColor]="ourServicesBanner2.backgroundColor" [textColor]="ourServicesBanner2.textColor"
+        [iconSource]="'../../assets/images/icons/banner-logo.svg'">
+    </app-banner>
+
+    <div class="features-section">
+        <div class="features-wrapper">
+            <app-service-description [title]="residentalLivingContent.title" [text1]="residentalLivingContent.text1"
+                [text2]="residentalLivingContent.text2" [shouldShowButton]="true"></app-service-description>
+            <div class="cards-wrapper">
+                <div class="card-item" [ngStyle]="{'background-color': '#DEF8F6', 'color': '#00857D'}">
+                    <div class="card-image">
+                        <div class="image-placeholder" [style.backgroundColor]="'#B4E4E2'"></div>
+                        <img src="../../../assets/images/stock/home/holistic-care.webp" alt="Card image">
+                    </div>
+                    <p class="title">Holistic Care</p>
+                    <p class="text">We understand that every resident is unique and deserves individualized care.
+                        <br><br> Our
+                        compassionate caregivers create customized care plans that encompass physical, emotional, and
+                        spiritual well-being, ensuring that residents receive the attention they deserve.
+                    </p>
+                </div>
+                <div class="card-item" [ngStyle]="{'background-color': '#DEF2F8', 'color': '#1E748A'}">
+                    <p class="title">Spiritual Nourishment</p>
+                    <p class="text">As a ministry nonprofit, we place a strong emphasis on spiritual well-being.
+                        <br><br>
+
+                        We offer spiritual guidance, religious services, and opportunities for residents to connect with
+                        their faith community. We believe in nurturing the soul alongside the body.
+                    </p>
+                </div>
+                <div class="card-item" [ngStyle]="{'background-color': '#F9EEE4', 'color': '#8A521E'}">
+                    <div class="card-image">
+                        <div class="image-placeholder reversed" [style.backgroundColor]="'#E4CBB4'"></div>
+                        <img src="../../../assets/images/stock/home/comunity-living.webp" alt="Card image">
+                    </div>
+                    <p class="title">Community Living</p>
+                    <p class="text">We foster a sense of community where residents can build meaningful relationships
+                        with their fellow residents and caregivers. <br><br>
+
+                        Our common areas and engaging activities encourage socialization and a feeling of belonging.</p>
+                </div>
+                <div class="card-item" [ngStyle]="{'background-color': '#EDDEF8', 'color': '#652D90'}">
+                    <div class="card-image">
+                        <div class="image-placeholder" [style.backgroundColor]="'#CFB4E4'"></div>
+                        <img src="../../../assets/images/stock/home/nutritious-meals.webp" alt="Card image">
+                    </div>
+                    <p class="title">Nutritious Meals</p>
+                    <p class="text">Good nutrition is essential for health and well-being. <br><br>
+
+                        Our talented culinary team prepares well-balanced, delicious meals that cater to individual
+                        dietary needs and preferences. <br><br>
+
+                        Residents can savor home-cooked meals in a warm and communal setting.</p>
+                </div>
+                <div class="card-item" [ngStyle]="{'background-color': '#DEE6F8', 'color': '#224187'}">
+                    <p class="title">24/7 Support</p>
+                    <p class="text">Our dedicated staff is available round-the-clock to provide assistance and support
+                        to our residents. <br><br>
+
+                        Whether it's help with daily activities or a reassuring presence during the night, we're here to
+                        ensure our residents' safety and comfort.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="service-section">
+        <div class="service-wrapper">
+            <app-service-description [title]="medicalTransportService.title" [text1]="medicalTransportService.text1"
+                [text2]="medicalTransportService.text2" [shouldShowButton]="true"></app-service-description>
+            <div class="cards-wrapper">
+                <div class="card-item" [ngStyle]="{'background-color': '#DEF8F6', 'color': '#00857D'}">
+                    <div class="card-image">
+                        <div class="image-placeholder" [style.backgroundColor]="'#B4E4E2'"></div>
+                        <img src="../../../assets/images/stock/home/transportation.webp" alt="Card image">
+                    </div>
+                    <p class="title">Safe and Reliable Transportation</p>
+                    <p class="text">We offer scheduled transportation services to medical appointments, therapy
+                        sessions, and other healthcare needs. <br><br>
+
+                        Our well-maintained vehicles and trained drivers provide a comfortable and secure transportation
+                        experience.</p>
+                </div>
+                <div class="card-item" [ngStyle]="{'background-color': '#DEF2F8', 'color': '#1E748A'}">
+                    <div class="card-image">
+                        <div class="image-placeholder" [style.backgroundColor]="'#B4DAE4'"></div>
+                        <img src="../../../assets/images/stock/home/support.webp" alt="Card image">
+                    </div>
+                    <p class="title">Compassionate Support</p>
+                    <p class="text">Our drivers are not just professionals but also compassionate individuals who
+                        understand the unique needs of our residents. <br><br>
+
+                        They provide assistance and reassurance throughout the transportation process, ensuring a
+                        stress-free experience.</p>
+                </div>
+                <div class="card-item" [ngStyle]="{'background-color': '#DEE6F8', 'color': '#224187'}">
+                    <div class="card-image">
+                        <div class="image-placeholder reversed" [style.backgroundColor]="'#B4C2E4'"></div>
+                        <img src="../../../assets/images/stock/home/wheelchair.webp" alt="Card image">
+                    </div>
+                    <p class="title">Wheelchair Accessibility</p>
+                    <p class="text">Our vehicles are equipped to accommodate residents with mobility challenges,
+                        including those requiring wheelchair-accessible transportation. <br><br>
+
+                        We prioritize accessibility and comfort for all our residents.</p>
+                </div>
+                <div class="card-item" [ngStyle]="{'background-color': '#EDDEF8', 'color': '#652D90'}">
+                    <div class="card-image">
+                        <div class="image-placeholder" [style.backgroundColor]="'#CFB4E4'"></div>
+                        <img src="../../../assets/images/stock/home/care.webp" alt="Card image">
+                    </div>
+                    <p class="title">Coordinated Care</p>
+                    <p class="text">Our team works closely with residents and their families to coordinate
+                        transportation, ensuring timely and hassle-free access to healthcare services. <br><br>
+
+                        We're here to provide the necessary support during medical visits.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <app-banner [title]="ourMissionBanner.title" [backgroundColor]="ourMissionBanner.backgroundColor"
+        [textColor]="ourMissionBanner.textColor" [iconSource]="'../../assets/images/icons/banner-logo4.svg'">
+    </app-banner>
+
+    <section class="mission">
+        <div class="content">
+            <p class="intro-text">At SAABOL, our mission is driven by a profound sense of gratitude and respect for the
+                courageous men and women who have dedicated their lives to defending our freedom. We are guided by the
+                following core principles:</p>
+            <div class="content-section">
+                <p class="title">Independence</p>
+                <p class="text">We believe in the inherent right of every individual, regardless of age or physical
+                    abilities, to live life on their own terms. Our goal is to create environments where senior and
+                    disabled veterans can maintain their independence and continue to enjoy life to the fullest.</p>
+            </div>
+            <div class="content-section">
+                <p class="title">Compassion</p>
+                <p class="text">Our compassionate team is committed to providing personalized care and support that goes
+                    beyond physical needs. We recognize the importance of nurturing the spirit and providing spiritual
+                    guidance to those who seek it.</p>
+            </div>
+            <div class="content-section">
+                <p class="title">Community</p>
+                <p class="text">We foster a sense of belonging and camaraderie within our communities, offering
+                    residents the opportunity to build meaningful connections and find solace in the company of their
+                    peers.</p>
+            </div>
+        </div>
+    </section>
+
+    <app-banner [title]="ourVisionBanner.title" [subtitle]="ourVisionBanner.subtitle"
+        [backgroundColor]="ourVisionBanner.backgroundColor" [textColor]="ourVisionBanner.textColor"
+        [iconSource]="'../../assets/images/icons/banner-logo3.svg'">
+    </app-banner>
+    <div class="contact-us-section">
+        <div class="contact-us">
+            <div class="image-wrapper">
+                <div class="image-placeholder"></div>
+                <img src="../../../assets/images/stock/home/contact-us.webp" alt="Contact Us" class="contact-us-img">
+            </div>
+            <div class="description">
+                <p class="title">Where Caring Meets Compassion</p>
+                <p class="text1">At SAABOL we are dedicated to serving our residents with love, care, and a deep
+                    sense of purpose.</p>
+                <p class="text2">Whether you're interested in our Residential Assisted Living services or require
+                    reliable medical transportation, we are here to support you with unwavering compassion and
+                    faith.</p>
+                <p class="text3">Please don't hesitate to reach out to us for more information about our services or
+                    to schedule a visit. We look forward to welcoming you into our extended family, where love and
+                    faith are at the heart of everything we do.</p>
+                <div class="contact-us-btn">
+                    <button (click)="onBtnClick()" class="secondary">Contact Us</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
