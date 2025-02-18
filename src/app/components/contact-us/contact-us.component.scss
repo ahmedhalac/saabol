@@ -4,8 +4,8 @@
 .wrapper {
   background: $contact-us-primary;
 
-  @include media(">=large-monitor") {
-    height: calc(100vh - 480px);
+  @include media(">=desktop") {
+    height: calc(100vh - 552px);
   }
 
   .contact-form-section {
